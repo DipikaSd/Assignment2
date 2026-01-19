@@ -478,43 +478,95 @@ footer {
     grid-row: auto !important;
   }
 }
+@media (max-width: 576px) {
+  .host-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .host-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
 
  
+/* ================= FOOTER ================= */
 .footer {
-  background:
-    linear-gradient(
-      rgba(20, 0, 43, 0.9),
-      rgba(20, 0, 43, 0.95)
-    ),
-    url("images/footer-bg.jpg") center/cover no-repeat;
-
-  padding: 80px 20px 40px;
+  background: url("assets/footer-bg.png")center/contain no-repeat;
+  
+  background: linear-gradient(rgba(20, 0, 43, 0.8), rgba(20, 0, 43, 0.9)), 
+              url("assets/footer-bg.png") center/cover no-repeat;
+  
+  padding: 120px 20px 60px; 
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.footer-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+
 .footer-logo {
-  font-size: 42px;
+  font-size: 64px; 
   font-weight: 800;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
+
 
 .footer-logo span {
-  color: #ff4ecd;
-}
-.footer-text {
-  opacity: 0.85;
-  margin-bottom: 30px;
+  background: linear-gradient(47.64deg, #f7e93f, #fb09b4, #9100f8);
+  -webkit-background-clip: text;
+  background-clip: text ;
+  -webkit-text-fill-color: transparent;
 }
 
-.footer hr {
-  width: 60%;
-  margin: 20px auto;
-  border: none;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
+
+.footer-platforms {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 35px;
+  font-size: 15px;
+  color: #ffffff;
+  opacity: 0.9;
 }
+
+.footer-platforms span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-platforms span:hover {
+  color: #ff4ecd; 
+}
+
 
 .copyright {
   font-size: 14px;
-  opacity: 0.6;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .footer-logo {
+    font-size: 42px;
+  }
+  .footer-platforms {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
